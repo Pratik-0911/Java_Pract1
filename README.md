@@ -5,7 +5,7 @@ https://github.com/santoshguggilla
 
 Comparator Class:- (static methods)
 1. comparing (static method)
-2. 2. reverseOrder
+2. reverseOrder
 
 
 Collections Class: - (static methods)
