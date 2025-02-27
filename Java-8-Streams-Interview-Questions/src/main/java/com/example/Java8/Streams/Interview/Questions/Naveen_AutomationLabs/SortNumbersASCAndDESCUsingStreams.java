@@ -18,5 +18,6 @@ public class SortNumbersASCAndDESCUsingStreams {
 
         System.out.println("2nd Way asendingOrder: "+asendingOrder1+" descending Order: "+descendingOrder1);
         System.out.println(" asendingOrder: "+asendingOrder+" descending Order: "+descendingOrder);
+
     }
 }
