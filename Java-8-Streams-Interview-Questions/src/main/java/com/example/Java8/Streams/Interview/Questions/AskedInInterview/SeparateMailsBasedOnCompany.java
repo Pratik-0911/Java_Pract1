@@ -12,6 +12,7 @@ public class SeparateMailsBasedOnCompany {
         String[] list={"ravi@gmail.com", "naveen@yahoo.com", "sham@hotmail.com"};
 
 
+
         Map<String, List<String>> emailMap = Arrays.stream(list)
                 .collect(Collectors.groupingBy(email -> email.split("@")[1].split("\\.")[0]));
 
@@ -21,7 +22,7 @@ public class SeparateMailsBasedOnCompany {
 
         for(String val:str)
         {
-            String[] result=val.split(".");
+            String[] result=val.split("\\.");
             System.out.println(Arrays.toString(result));
         }
 

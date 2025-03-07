@@ -13,5 +13,8 @@ public class AnyMatchEx {
         Set<Integer> set=new HashSet<>();
 
         boolean result= Arrays.stream(num).boxed().anyMatch(set::add);
+
+
+
     }
 }
