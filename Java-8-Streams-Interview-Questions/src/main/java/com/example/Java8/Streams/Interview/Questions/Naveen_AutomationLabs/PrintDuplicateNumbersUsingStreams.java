@@ -56,6 +56,7 @@ public class PrintDuplicateNumbersUsingStreams {
 
         justToCheck();
 
+        practice();
 
     }
 
@@ -69,6 +70,20 @@ public class PrintDuplicateNumbersUsingStreams {
         if (s.length() == 0 || s.length() == 1) return true;
         else if (s.charAt(0) == s.charAt(s.length() - 1)) return isPalindrome(s.substring(1, s.length() - 1));
         else return false;
+    }
+
+    private static void practice()
+    {
+        //Duplicate Values
+
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 2, 3, 4, 5);
+
+        Set<Integer> set=new HashSet<>();
+
+        System.out.println("Practice: "+list.stream().filter(val->!set.add(val)).toList());
+
+        System.out.println(list.stream().filter(e->Collections.frequency(list,e)>1).collect(Collectors.toSet()));
+
     }
 
 }

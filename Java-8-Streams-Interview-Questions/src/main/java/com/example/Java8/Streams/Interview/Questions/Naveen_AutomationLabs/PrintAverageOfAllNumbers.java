@@ -13,5 +13,16 @@ public class PrintAverageOfAllNumbers {
 
         double result=list.stream().mapToInt(e-> e).average().orElse(0.0);
         System.out.println(result);
+
+        practice();
+
+    }
+
+    private static void practice()
+    {
+        List<Integer> list= Arrays.asList(1,2,3,4,5,6,7);
+
+        System.out.println((int)list.stream().mapToInt(e->e)
+                .average().orElse(0.0));
     }
 }

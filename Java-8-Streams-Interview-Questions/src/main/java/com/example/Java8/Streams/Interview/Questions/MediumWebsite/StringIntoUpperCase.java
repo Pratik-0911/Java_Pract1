@@ -10,8 +10,9 @@ public class StringIntoUpperCase {
        String result= str.chars().mapToObj(s->(char)s)
                 .map(s->Character.toString(Character.toUpperCase(s))).collect(Collectors.joining(""));
 
-
         System.out.println(result);
+
+        System.out.println((1==1)+" "+(128==128));
 
 
     }

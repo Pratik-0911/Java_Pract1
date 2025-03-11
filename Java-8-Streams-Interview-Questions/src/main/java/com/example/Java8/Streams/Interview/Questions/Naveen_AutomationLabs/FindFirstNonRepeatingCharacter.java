@@ -25,6 +25,8 @@ public class FindFirstNonRepeatingCharacter {
         System.out.println(result);
 
         anotherWayToHandle(input);
+
+        practice();
     }
 
     public static void anotherWayToHandle(String input)
@@ -35,6 +37,26 @@ public class FindFirstNonRepeatingCharacter {
                 .get();
 
         System.out.println(result);
+    }
+
+    private static  void practice()
+    {
+        String input="Java  Articles are Awesome";
+
+        System.out.println(input.toLowerCase().chars().mapToObj(e->(char)e)
+                .collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new, Collectors.counting()))
+                .entrySet()
+                .stream()
+                .filter(e->e.getValue()==1L)
+                        .map(Map.Entry::getKey)
+//                        .skip(1)
+                        .findFirst().get()
+
+
+        );
+
+
+
     }
 
 

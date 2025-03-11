@@ -14,8 +14,14 @@ public class PrintSumOfAllNumbers {
        Integer result=list.stream().reduce(Integer::sum).get();
         System.out.println(result);
 
+        practice();
 
+    }
 
+    private static void practice()
+    {
+        List<Integer> list= Arrays.asList(1,2,3,4,5,6,7);
 
+        System.out.println(list.stream().mapToInt(e->e).sum());
     }
 }

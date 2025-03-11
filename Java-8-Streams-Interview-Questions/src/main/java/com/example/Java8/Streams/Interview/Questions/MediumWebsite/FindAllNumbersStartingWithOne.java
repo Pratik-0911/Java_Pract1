@@ -10,6 +10,14 @@ public class FindAllNumbersStartingWithOne {
         System.out.println(Arrays.stream(nums).boxed().filter(s-> String.valueOf(s).startsWith("1")).toList());
 
 
+        practice();
 
+    }
+
+    private static void  practice()
+    {
+        int[] nums={12,34,123,165,23,876};
+
+        System.out.println(Arrays.stream(nums).boxed().filter(s->String.valueOf(s).startsWith("1")).toList());
     }
 }

@@ -50,7 +50,19 @@ public class WrapCheckedExceptionInRuntimeUsingStreams {
                 })
                 .collect(Collectors.toList());
 
+        List<Integer> result1 = list.stream()
+                .map(item -> {
+                    try {
+                        return Integer.parseInt(item);
+                    } catch (NumberFormatException e) {
+                        throw new RuntimeException("Invalid number format: " + item, e);
+                    }
+                })
+                .collect(Collectors.toList());
+
     }
+
+
 
 
 }

@@ -25,11 +25,15 @@ public class SeparateMailsBasedOnCompany {
             String[] result=val.split("\\.");
             System.out.println(Arrays.toString(result));
         }
+        practice();
+    }
 
+    private static void practice() {
 
+        String[] list={"ravi@gmail.com", "naveen@yahoo.com", "sham@hotmail.com"};
 
-
-
+        System.out.println(Arrays.stream(list).collect(Collectors.groupingBy(e->e.split("@")[1].split("\\.")[0])));
 
     }
+
 }
